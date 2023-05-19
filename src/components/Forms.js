@@ -84,6 +84,7 @@ const Form = (method) => {
             
           } catch (error) {
             // Handle login errors
+            alert('details not right');
             const errorCode = error.code;
             const errorMessage = error.message;
             console.error('Login error:', errorCode, errorMessage);
