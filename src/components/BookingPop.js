@@ -36,23 +36,31 @@ const BookingPop=({flight,show})=>{
   const ticketConfirmHandler=(e)=>{
     e.preventDefault();
     const {id}=flight;
-    
-    let newseats=[...seats];
-    for(let i=0;i<seats.length;i++)
-    {   
-        if(selectedIndex.includes(i))
-        { 
-           newseats[i]=parseInt(1);   
-        } 
+    if(selectedIndex.length==0)
+    {
+        alert('Please select seats first');
+        show();
     }
-    console.log(id,newseats)
-    const date=generateRandomDate()
-    console.log(date);
-    dispatch(updateSeats({id,newseats}));
-     dispatch(addbooking({date,id,email,tickets:numtixx}));
-     //dispatch(delbooking);
-    alert('Tickets booked , Happy flying');
-    show();
+    else {
+      let newseats=[...seats];
+      for(let i=0;i<seats.length;i++)
+      {   
+          if(selectedIndex.includes(i))
+          { 
+             newseats[i]=parseInt(1);   
+          } 
+      }
+      console.log(id,newseats)
+      const date=generateRandomDate()
+      console.log(date);
+      dispatch(updateSeats({id,newseats}));
+       dispatch(addbooking({date,id,email,tickets:numtixx}));
+       //dispatch(delbooking);
+      alert('Tickets booked , Happy flying');
+      show();
+       
+    }
+   
 
    }
   const ticketCancelHandler=(e)=>{
