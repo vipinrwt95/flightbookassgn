@@ -36,7 +36,7 @@ const BookingPop=({flight,show})=>{
   const ticketConfirmHandler=(e)=>{
     e.preventDefault();
     const {id}=flight;
-    if(selectedIndex.length==0)
+    if(selectedIndex.length===0)
     {
         alert('Please select seats first');
         show();
