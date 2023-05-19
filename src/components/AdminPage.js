@@ -104,7 +104,7 @@ return (
         {!showtixdetails && <button onClick={()=>{setshowtixdetails(prev=>!prev)}}>See Flight-Wise booking</button>}
         {showtixdetails && <button onClick={()=>{setshowtixdetails(prev=>!prev)}}>Hide Flight-Wise booking</button>}
       {
-          showtixdetails &&  bookingstoshow.map((item)=><div>{item.tickets} by {item.email}</div>)  
+          showtixdetails &&  bookingstoshow.map((item)=><div>{item.tickets}TICKETS BOOKED&nbsp;&nbsp;&nbsp;&nbsp; BY  &nbsp;&nbsp;&nbsp;{item.email}<Flight id={item.id}/></div>)  
         } </>}
         {bookingstoshow.length===0 && <h6>No tickets booked</h6>}
     </div> }
