@@ -36,7 +36,7 @@ const Registeration=()=>{
 
   return (<>
   <div>
-    <div><h1>Credentails to use</h1>
+    <div><h1>Credentials to use</h1>
     <p>User-Email: test@test.com</p>
     <p>Admin-email:admintest@test.com</p>  
     <p>Password:12345678</p></div>
